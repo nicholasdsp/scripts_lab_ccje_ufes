@@ -1,0 +1,96 @@
+#Requires -RunAsAdministrator
+
+function Write-Signature {
+    Clear-Host
+    Write-Host "** Equipe de TI"
+    Write-Host "** CCJE / UFES"
+    Write-Host ""
+
+}
+
+Write-Signature
+$wg_version = ''
+try
+{
+    $wg_version = winget --version
+}
+catch [System.Management.Automation.CommandNotFoundException]
+{
+    Write-Host "winget was not found."
+    if (!(Test-Path '.\ps1\winget-dependencies\winget.msixbundle'))
+    {
+        Write-Host "winget.msixbundle not found. downloading it ..."
+        powershell -File '.\ps1\download-winget.ps1'
+    }
+    Write-Host "installing winget ..."
+    $wg_dependencies = '.\ps1\winget-dependencies\Microsoft.UI.Xaml.2.8.appx', '.\ps1\winget-dependencies\Microsoft.VCLibs.140.00.UWPDesktop_14.0.33728.0_x64__8wekyb3d8bbwe.appx'
+    Add-AppXPackage -Path '.\ps1\winget-dependencies\winget.msixbundle' -DependencyPath $wg_dependencies
+    $wg_version = winget --version
+}
+catch
+{
+    Write-Host "error:"
+    Write-Host $_
+}
+
+if ($wg_version -ne '')
+{
+    winget settings --enable LocalManifestFiles
+    winget settings --enable LocalArchiveMalwareScanOverride
+
+    Write-Host "a valid winget installation was found: $wg_version"
+    Write-Host ""
+    $available_configs = "708", "teste"
+    
+    Write-Host "** config. encontradas:"
+    Write-Host ($available_configs -join "`n")
+    $lab_config = Read-Host "Digite a config. para instalar"
+    
+    if ($lab_config -ne '')
+    {
+        $lab_config.ToLower()
+    }
+
+    Import-Csv -Path '.\data\programas.csv' -Encoding utf8 | Foreach-Object {
+        if ($_.ID_WINGET -ne '')
+        {
+            $prgm_configs = $_.CONFIG -split ";"
+            if ($prgm_configs.Contains($lab_config))
+            {
+
+                Write-Signature
+                Write-Host "** Configurando [" $lab_config "]"
+                Write-Host "** Tentando instalar:" $_.NOME
+
+                $wg_prgm_options = ''
+                if ($_.OPTIONS -ne '')
+                {
+                    $wg_prgm_options = $_.OPTIONS
+                }
+
+                if ($_.ID_WINGET.StartsWith("local:"))
+                {
+                    $local_path = ".\manifests" + $_.ID_WINGET.Substring(6)
+                    Write-Host "installing from local manifest:" $local_path
+                    
+                    winget install -m $local_path --ignore-local-archive-malware-scan --accept-source-agreements --accept-package-agreements $wg_prgm_options
+                }
+                elseif ($_.ID_WINGET.StartsWith("ps:"))
+                {
+                    $script_filepath = ".\ps1\" + $_.ID_WINGET.Substring(3)
+                    Write-Host "custom installation script:" $script_filepath
+                    powershell -File  $script_filepath
+                }
+                else
+                {
+                    winget install -e --id $_.ID_WINGET --accept-source-agreements --accept-package-agreements $wg_prgm_options
+                }
+            }
+        }
+        
+    }
+
+    #winget install -e --id TheDocumentFoundation.LibreOffice --accept-package-agreements
+    #winget install -e --id RProject.R --accept-package-agreements
+    
+}

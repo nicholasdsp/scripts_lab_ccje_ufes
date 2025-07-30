@@ -1,6 +1,7 @@
 "NOME","ID_WINGET","CONFIG","OPTIONS"
-"R","Rproject.R",701;708,
-"R Studio","Posit.Rstudio",701;708,
+"Google Chrome","Google.Chrome",701;708,
+"R","RProject.R",701;708,
+"R Studio","Posit.RStudio",701;708,
 "JRE8","Oracle.JavaRuntimeEnvironment",701,
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",refazer,
 "Mendeley Desktop","Elsevier.MendeleyReferenceManager",701,
@@ -22,7 +23,7 @@
 "Factor","ps:ci-factor.ps1",701;csfactor,
 "FileZilla",,701,
 "Iramuteq",,701,
-"Zotero","DigitalScholar.Zotero",708
-"Blender","BlenderFoundation.Blender",708
-"Inkscape","Inkscape.Inkscape",708
-"CmapTools","IHMC.CmapTools",708
+"Zotero","DigitalScholar.Zotero",708,
+"Blender","BlenderFoundation.Blender",708,
+"Inkscape","Inkscape.Inkscape",708,
+"CmapTools","IHMC.CmapTools",708,

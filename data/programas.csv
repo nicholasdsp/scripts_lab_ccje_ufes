@@ -1,6 +1,6 @@
 "NOME","ID_WINGET","CONFIG","OPTIONS"
-"R","Rproject.R",701,
-"R Studio","Posit.Rstudio",701,
+"R","Rproject.R",701;708,
+"R Studio","Posit.Rstudio",701;708,
 "JRE8","Oracle.JavaRuntimeEnvironment",701,
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",refazer,
 "Mendeley Desktop","Elsevier.MendeleyReferenceManager",701,
@@ -10,8 +10,8 @@
 "Cmaptools","IHMC.CmapTools",701,
 "DBDesigner",,701,
 "Virtual Box","Oracle.VirtualBox",701,
-"Libreoffice","TheDocumentFoundation.LibreOffice",701,
-"Jamovi","Jamovi.Desktop.Current",701,
+"Libreoffice","TheDocumentFoundation.LibreOffice",701;708,
+"Jamovi","Jamovi.Desktop.Current",701;708,
 "7-zip","7zip.7zip",701,
 "MySQL","Oracle.MySQL",701,
 "Power BI","Microsoft.PowerBI",701,
@@ -22,3 +22,7 @@
 "Factor","ps:ci-factor.ps1",701;csfactor,
 "FileZilla",,701,
 "Iramuteq",,701,
+"Zotero","DigitalScholar.Zotero",708
+"Blender","BlenderFoundation.Blender",708
+"Inkscape","Inkscape.Inkscape",708
+"CmapTools","IHMC.CmapTools",708

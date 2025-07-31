@@ -9,7 +9,7 @@ if (Test-Path -Path "C:\Users\Aluno_CCJE")
             $shorcutDestination = "C:\Users\Aluno_CCJE\Desktop\" + $_.Name
             if (Test-Path -Path $shorcutDestination)
             {
-                Write-Host "Atalho já existe."
+                Write-Host "Atalho existe."
             }
             else 
             {
@@ -21,5 +21,5 @@ if (Test-Path -Path "C:\Users\Aluno_CCJE")
 }
 else 
 {
-    Write-Host "Não foi possível criar atalhos, usuário Aluno_CCJE não encontrado."
+    Write-Host "Aluno_CCJE não encontrado."
 }

@@ -9,7 +9,7 @@ InstallerSwitches:
   SilentWithProgress: -q
 Installers:
 - Architecture: x64
-  InstallerUrl: http://ccje-websrv1/repositorio/IRPF2025Win64v1.4.exe
+  InstallerUrl: http://ccje-websrv1/repositorio/irpf2025.exe
   InstallerSha256: 92770EC5DEB4782AE42121FACD51B11D2BD24A00A6F47A1DB8F878379070CF81
 ManifestType: installer
 ManifestVersion: 1.10.0

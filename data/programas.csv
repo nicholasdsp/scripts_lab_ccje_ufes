@@ -4,12 +4,12 @@
 "R Studio","Posit.RStudio",701;708,
 "JRE8","Oracle.JavaRuntimeEnvironment",701,
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",refazer,
-"Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.5",701;708,
+"Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.5",701;708,"-i"
 "ARCHIVEMATICA",,701,
 "OpenRefine","OpenRefine.OpenRefine",701,
 "Zotero","DigitalScholar.Zotero",701;708,
 "CmapTools","IHMC.CmapTools",701;708,
-"DBDesigner","local:\f\fabFORCE.net\DBDesigner\4.0.5.6",701;708,
+"DBDesigner","local:\f\fabFORCE.net\DBDesigner\4.0.5.6",701;708,"--scope machine"
 "Virtual Box","Oracle.VirtualBox",701,
 "LibreOffice","TheDocumentFoundation.LibreOffice",701;708,
 "Jamovi","Jamovi.Desktop.Current",701;708,
@@ -20,7 +20,7 @@
 "GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",701,
 "Gephi","Gephi.Gephi",701,
 "Jasp","9P08CWG12JNL",701,
-"Factor","local:\f\Factor\Factor\12.06.08",701,
+"Factor","local:\f\Factor\Factor\12.06.08",701,"--scope machine"
 "FileZilla",,701,
 "Iramuteq",,701,
 "Blender","BlenderFoundation.Blender",708,

@@ -73,7 +73,7 @@ if ($wg_version -ne '')
                     $local_path = ".\manifests" + $_.ID_WINGET.Substring(6)
                     Write-Host "installing from local manifest:" $local_path
                     
-                    winget install -m $local_path --scope machine --ignore-local-archive-malware-scan --accept-source-agreements --accept-package-agreements $wg_prgm_options
+                    winget install -m $local_path --ignore-local-archive-malware-scan --accept-source-agreements --accept-package-agreements $wg_prgm_options
                 }
                 elseif ($_.ID_WINGET.StartsWith("ps:"))
                 {
@@ -83,12 +83,13 @@ if ($wg_version -ne '')
                 }
                 else
                 {
-                    winget install -e --id $_.ID_WINGET --scope machine --accept-source-agreements --accept-package-agreements $wg_prgm_options
+                    winget install -e --id $_.ID_WINGET --accept-source-agreements --accept-package-agreements $wg_prgm_options
                 }
             }
         }
-        
     }
-    powershell -File '.\ps1\create-portable-shortcuts.ps1'
-    
 }
+if ($wg_version -ne '')
+{
+    powershell -File '.\ps1\create-portable-shortcuts.ps1'
+}   

@@ -1,0 +1,12 @@
+# Created using wingetcreate 1.10.3.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+
+PackageIdentifier: Elsevier.MendeleyDesktop
+PackageVersion: 1.19.5
+InstallerType: nullsoft
+Installers:
+- Architecture: x86
+  InstallerUrl: http://ccje-websrv1/repositorio/Mendeley-Desktop-1.19.5-win32.exe
+  InstallerSha256: 0d291c98f208854b1788410313d2be09c81278321c26acc8f6f0cee8c812f4cb
+ManifestType: installer
+ManifestVersion: 1.10.0

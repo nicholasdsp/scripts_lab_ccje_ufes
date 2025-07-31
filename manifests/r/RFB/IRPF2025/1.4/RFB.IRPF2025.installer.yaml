@@ -1,0 +1,15 @@
+# Created using wingetcreate 1.10.3.0
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+
+PackageIdentifier: RFB.IRPF2025
+PackageVersion: "1.4"
+InstallerType: exe
+InstallerSwitches:
+  Silent: -q
+  SilentWithProgress: -q
+Installers:
+- Architecture: x64
+  InstallerUrl: http://ccje-websrv1/repositorio/IRPF2025Win64v1.4.exe
+  InstallerSha256: 92770EC5DEB4782AE42121FACD51B11D2BD24A00A6F47A1DB8F878379070CF81
+ManifestType: installer
+ManifestVersion: 1.10.0

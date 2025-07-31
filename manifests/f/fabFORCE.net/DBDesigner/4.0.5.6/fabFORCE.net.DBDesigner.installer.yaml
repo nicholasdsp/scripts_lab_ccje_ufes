@@ -1,0 +1,12 @@
+PackageIdentifier: fabFORCE.net.DBDesigner
+PackageVersion: "4.0.5.6"
+InstallerType: zip
+Installers:
+- Architecture: x86
+  NestedInstallerType: portable
+  NestedInstallerFiles:
+  - RelativeFilePath: ./DBDesigner4.exe
+  InstallerUrl: http://ccje-websrv1/repositorio/DBDesigner4.0.5.6_Full.zip
+  InstallerSha256: 377146cde9c56a7e05d424dff82faf9e046807000dc7cf581d4a69e461b9b9f6
+ManifestType: installer
+ManifestVersion: 1.10.0

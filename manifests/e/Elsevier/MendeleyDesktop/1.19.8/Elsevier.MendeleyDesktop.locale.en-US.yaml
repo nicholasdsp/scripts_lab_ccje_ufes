@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.10.0.schema.json
 
 PackageIdentifier: Elsevier.MendeleyDesktop
-PackageVersion: 1.19.5
+PackageVersion: 1.19.8
 PackageLocale: en-US
 Publisher: Elsevier
 PackageName: MendeleyDesktop

@@ -2,11 +2,11 @@
 # yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
 
 PackageIdentifier: Elsevier.MendeleyDesktop
-PackageVersion: 1.19.5
+PackageVersion: 1.19.8
 InstallerType: nullsoft
 Installers:
 - Architecture: x86
-  InstallerUrl: http://ccje-websrv1/repositorio/Mendeley-Desktop-1.19.5-win32.exe
-  InstallerSha256: 0d291c98f208854b1788410313d2be09c81278321c26acc8f6f0cee8c812f4cb
+  InstallerUrl: http://ccje-websrv1/repositorio/Mendeley-Desktop-1.19.8-win32.exe
+  InstallerSha256: 99b308cda0047bdaae8727ebd92b7ce6c8342fe794732b61313db5444cf69f4f
 ManifestType: installer
 ManifestVersion: 1.10.0

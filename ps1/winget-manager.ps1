@@ -8,6 +8,34 @@ function Write-Signature {
 
 }
 
+function EnsureLocalUserExists {
+    param ([string]$username)
+    
+    $userExists = (Get-LocalUser).Name -Contains $username
+    $password = ConvertTo-SecureString "TempPassword" -AsPlainText -Force
+    if (-Not ($userExists))
+    {
+        Write-Host "Creating user: $username"
+        New-LocalUser -Name $username -FullName $username -Password $password
+        Set-LocalUser -Name $username -AccountNeverExpires
+        Enable-LocalUser -Name $username
+        $usersGroup = New-Object System.Security.Principal.SecurityIdentifier("S-1-5-32-545")
+        $group = $usersGroup.Translate([System.Security.Principal.NTAccount]).Value
+        $group = $group.Split('\')[1]
+        Add-LocalGroupMember -Group $group -Member $username
+    }
+    if (-Not(Test-Path -Path "C:\Users\$username")) # ensure user directories exists.
+    {
+        $cred = New-Object System.Management.Automation.PSCredential ($username, $password)
+        Write-Host "Creating $username directories"
+        Start-Process "cmd.exe" -Credential $cred -ArgumentList "/C" -LoadUserProfile
+        
+        Set-LocalUser -name $username -Password ([securestring]::new())
+        Set-LocalUser -Name $username -UserMayChangePassword $false
+        Set-LocalUser -Name $username -PasswordNeverExpires $true
+    }
+}
+
 Write-Signature
 $wg_version = ''
 try
@@ -32,6 +60,8 @@ catch
     Write-Host "error:"
     Write-Host $_
 }
+
+EnsureLocalUserExists -username "Aluno_CCJE"
 
 if ($wg_version -ne '')
 {
@@ -89,7 +119,3 @@ if ($wg_version -ne '')
         }
     }
 }
-if ($wg_version -ne '')
-{
-    powershell -File '.\ps1\create-portable-shortcuts.ps1'
-}   

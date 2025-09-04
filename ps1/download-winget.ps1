@@ -1,7 +1,12 @@
+if (-Not (Test-Path -Path "./ps1/winget-dependencies"))
+{
+    New-Item "./ps1/winget-dependencies" -ItemType Directory -ea 0
+}
+
 $latestWingetMsixBundleUri = $(Invoke-RestMethod https://api.github.com/repos/microsoft/winget-cli/releases/latest).assets.browser_download_url | Where-Object {$_.EndsWith(".msixbundle")}
 Write-Information "downloading winget ..."
 Invoke-WebRequest -Uri $latestWingetMsixBundleUri -OutFile "./ps1/winget-dependencies/winget.msixbundle"
-#todo: check if dependencies exist and download if not
+
 if (-Not (Test-Path -Path "./ps1/winget-dependencies/Microsoft.UI.Xaml.2.8.appx"))
 {
     Invoke-WebRequest -Uri "http://ccje-websrv1/repositorio/Microsoft.UI.Xaml.2.8.appx" -OutFile "./ps1/winget-dependencies/Microsoft.UI.Xaml.2.8.appx"

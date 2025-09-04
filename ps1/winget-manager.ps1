@@ -70,7 +70,7 @@ if ($wg_version -ne '')
 
     Write-Host "a valid winget installation was found: $wg_version"
     Write-Host ""
-    $available_configs = "708", "teste"
+    $available_configs = "708", "701", "709", "debug"
     
     Write-Host "** config. encontradas:"
     Write-Host ($available_configs -join "`n")

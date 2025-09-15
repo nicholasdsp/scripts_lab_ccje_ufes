@@ -7,7 +7,7 @@ function Write-Signature {
     Write-Host ""
 
 }
-
+#todo: mysql, archivematica, biblivre
 function EnsureLocalUserExists {
     param ([string]$username)
     

@@ -1,7 +1,7 @@
 "NOME","ID_WINGET","CONFIG","OPTIONS"
 "7-zip","7zip.7zip",701;708;709,
 "Google Chrome","Google.Chrome",701;708;709,
-"Firefox","Mozilla.Firefox.pt-BR",701;708
+"Firefox","Mozilla.Firefox.pt-BR",701;708;709
 "R","RProject.R",701;708,
 "R Studio","Posit.RStudio",701;708,
 "JRE8","Oracle.JavaRuntimeEnvironment",701;708,
@@ -15,15 +15,15 @@
 "Virtual Box","Oracle.VirtualBox",701,
 "LibreOffice","TheDocumentFoundation.LibreOffice",701;708,
 "Jamovi","Jamovi.Desktop.Current",701;708,
-"MySQL","Oracle.MySQL",701,
+"MySQL","Oracle.MySQL",debug,
 "Power BI","Microsoft.PowerBI",701,
 "IRPF 2025","local:\r\RFB\IRPF2025\1.4",701;708,
 "GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",701,
 "Gephi","Gephi.Gephi",701,
-"Jasp","UniversityOfAmsterdam.JASP",701,
+"Jasp","UniversityOfAmsterdam.JASP",701;708,
 "Factor","ps:ci-factor.ps1",debug,
 "FileZilla","local:\t\TimKosse\FileZilla\3.69.1",701,
-"Blender 3.3","BlenderFoundation.Blender.LTS.3.3",708;701,
+"Blender 2.83 LTS","9NDC4WK85MS6",708;701,
 "Blender","BlenderFoundation.Blender",709,
 "Inkscape","Inkscape.Inkscape",708;701,
 "JabRef","JabRef.JabRef",708;701

@@ -8,7 +8,7 @@ InstallerType: wix
 ProductCode: '{0673386A-BB4C-32B3-B20F-3AF3B233B483}'
 Installers:
 - Architecture: x64
-  InstallerUrl: http://ccje-websrv1/repositorio/GraphDB_Desktop-10.1.4.msi
+  InstallerUrl: http://ccje-web/lab/GraphDB_Desktop-10.1.4.msi
   InstallerSha256: DFA400346EBDEAD21D05306464A6FE90FB8B34575DF5AC49CB50E8C8E17B4408
 ManifestType: installer
 ManifestVersion: 1.10.0

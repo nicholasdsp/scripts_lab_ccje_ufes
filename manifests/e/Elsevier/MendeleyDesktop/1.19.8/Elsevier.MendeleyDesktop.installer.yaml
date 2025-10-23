@@ -6,7 +6,7 @@ PackageVersion: 1.19.8
 InstallerType: nullsoft
 Installers:
 - Architecture: x86
-  InstallerUrl: http://ccje-websrv1/repositorio/Mendeley-Desktop-1.19.8-win32.exe
+  InstallerUrl: http://ccje-web/lab/Mendeley-Desktop-1.19.8-win32.exe
   InstallerSha256: 99b308cda0047bdaae8727ebd92b7ce6c8342fe794732b61313db5444cf69f4f
 ManifestType: installer
 ManifestVersion: 1.10.0

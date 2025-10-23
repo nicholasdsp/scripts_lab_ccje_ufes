@@ -1,0 +1,28 @@
+"NOME","INSTALL_CMD","CONFIG","OPTIONS"
+"7-zip","Nativo",701;708;709,
+"Google Chrome","Nativo(chromium)",701;708;709,
+"Firefox","Nativo",701;708;709
+"R","Nativo",701;708,
+"R Studio","Nativo",701;708,
+"JRE8","Nativo",701;708,
+"Biblivre","Nativo",debug,
+"Mendeley Desktop","Nativo",701;708,"-i"
+"ARCHIVEMATICA","Nativo",debug,
+"OpenRefine","Nativo",701,
+"Zotero","Nativo",701;708,
+"CmapTools","Nativo",701;708,
+"DBDesigner","Nativo",debug,
+"Virtual Box","Nativo",701,
+"LibreOffice","Nativo",701;708,
+"Jamovi","Nativo",701;708,
+"MySQL Workbench"," Investigar ",debug,
+"Power BI"," Não ",701,
+"IRPF 2025","Nativo",701;708,
+"GraphDB","Nativo",701,
+"Gephi","Nativo",701,
+"Jasp","Nativo",701;708,
+"Factor"," Investigar ",debug,
+"FileZilla","Nativo",701,
+"Blender 2.83 LTS","Nativo",708;701,
+"Inkscape","Nativo",708;701,
+"JabRef","Nativo",708;701

@@ -6,7 +6,7 @@ PackageVersion: 3.69.1
 InstallerType: nullsoft
 Installers:
 - Architecture: x64
-  InstallerUrl: http://ccje-websrv1/repositorio/FileZilla_3.69.1_win64-setup.exe
+  InstallerUrl: http://ccje-web/lab/FileZilla_3.69.1_win64-setup.exe
   InstallerSha256: 6CBD5FDB157A7851CDD32B9A61D6136A31A5FA05FB36FD9403B920B708C9125E
 ManifestType: installer
 ManifestVersion: 1.10.0

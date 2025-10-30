@@ -35,7 +35,7 @@ function EnsureLocalUserExists {
         Set-LocalUser -Name $username -PasswordNeverExpires $true
     }
 }
-
+$ProgressPreference = 'SilentlyContinue'
 Write-Signature
 $wg_version = ''
 try
@@ -70,6 +70,8 @@ if ($wg_version -ne '')
 
     Write-Host "a valid winget installation was found: $wg_version"
     Write-Host ""
+    Write-Host "** Atualizando winget"
+    winget upgrade winget
     $available_configs = "708", "701", "709", "debug"
     
     Write-Host "** config. encontradas:"

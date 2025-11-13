@@ -1,14 +1,17 @@
 # Archivematica CI
-
 Write-Host "Instalando ARCHIVEMATICA"
+Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
+Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
 
-$url = "http://ccje-web/lab/Archivematica 1-12-0.ova"
-$target_path = "C:\Users\Aluno_CCJE\Desktop\Archivematica 1-12-0.ova"
+$source_path = "\\ccje-smb2\lc_guest\"
+$target_path = "C:\Users\Aluno_CCJE\Desktop\"
+$filename = "Archivematica 1-12-0.ova"
+
 try 
 {
-    Invoke-WebRequest -Uri $url -OutFile ($target_path)
+    robocopy $source_path $target_path $filename /eta
 }
 catch 
 {
-    Write-Host "Erro: $($_.Exception.Response.StatusCode.value__)"
+    Write-Host "File copy error"
 }

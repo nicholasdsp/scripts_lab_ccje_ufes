@@ -61,18 +61,19 @@ catch
     Write-Host $_
 }
 
-EnsureLocalUserExists -username "Aluno_CCJE"
+#EnsureLocalUserExists -username "Aluno_CCJE"
 
 if ($wg_version -ne '')
 {
     winget settings --enable LocalManifestFiles
     winget settings --enable LocalArchiveMalwareScanOverride
-
+    winget settings --enable BypassCertificatePinningForMicrosoftStore
+    
     Write-Host "a valid winget installation was found: $wg_version"
     Write-Host ""
     Write-Host "** Atualizando winget"
     winget upgrade winget
-    $available_configs = "708", "701", "709", "debug"
+    $available_configs = "adm", "usr", "debug"
     
     Write-Host "** config. encontradas:"
     Write-Host ($available_configs -join "`n")

@@ -9,7 +9,7 @@ Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
 $source_path = "\\ccje-smb2\lc_guest\"
 $target_path = "C:\Users\Aluno_CCJE\Desktop\inst_manual"
 $filename1 = "Instalador_Biblivre_5.0.5.exe"
-$filename2 = "Atualizador_Biblivre_5.0.5.exe"
+$filename2 = "Atualizador_Biblivre_5.1.31.exe"
 
 New-Item -Path $target_path -ItemType Directory -Force
 

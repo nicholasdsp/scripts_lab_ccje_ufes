@@ -15,3 +15,5 @@ catch
 {
     Write-Host "File copy error"
 }
+
+msiexec /qn /i "$target_path\$filename1" ALLUSERS=1

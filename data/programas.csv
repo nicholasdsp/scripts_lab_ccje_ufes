@@ -6,28 +6,31 @@
 "R Studio","Posit.RStudio",adm,
 "JRE8","Oracle.JavaRuntimeEnvironment",adm,
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",debug,
-"OpenRefine","OpenRefine.OpenRefine",usr,"-g"
+"OpenRefine","OpenRefine.OpenRefine",adm,"--scope machine"
 "Zotero","DigitalScholar.Zotero",adm,
 "CmapTools","IHMC.CmapTools",usr,
 "Virtual Box","Oracle.VirtualBox",adm,
 "LibreOffice","TheDocumentFoundation.LibreOffice",adm,
-"Jamovi","Jamovi.Desktop.Current",adm,
-"MySQL","Oracle.MySQL",debug,
-"IRPF 2025","local:\r\RFB\IRPF2025\1.4",adm,
-"GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",debug,
-"Gephi","Gephi.Gephi",usr,
+"Jamovi","Jamovi.Desktop.Solid",adm,
+"IRPF 2025","local:\r\RFB\IRPF2025\1.4",usr,
+"GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",adm,"--scope machine"
+"Gephi","Gephi.Gephi",adm,"--scope machine"
 "Jasp","UniversityOfAmsterdam.JASP",adm,
 "FileZilla","local:\t\TimKosse\FileZilla\3.69.1",adm,
-"Blender","BlenderFoundation.Blender",usr,
+"Blender","BlenderFoundation.Blender.LTS.4.5",adm,"
 "Inkscape","Inkscape.Inkscape",usr,
+"Git","Git.Git",usr,
+"Python","Python.Python.3.14",adm,"--scope machine"
+"GIMP","GIMP.GIMP.3",adm,"--scope machine"
+"Wings3D","Wings3D.Wings3D",adm,"--scope machine"
 "JabRef","JabRef.JabRef",adm,
 "Bizagi Modeler", "local:\b\BizagiLimited\BizagiModeler\4.1.0002",debug,"-i"
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
 "Factor","ps:ci-factor.ps1",usr,
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
+"MySQL Community_manual","ps:ci-mysql.ps1",usr,
 "ARCHIVEMATICA","ps:ci-archivematica.ps1",usr,
-"GraphDB_manual","ps:ci-graphdb.ps1",usr,
+"GraphDB_manual","ps:ci-graphdb.ps1",debug,
 "Biblivre_manual","ps:ci-biblivre.ps1",usr,
 "Bizagi Modeler_manual","ps:ci-bizagi.ps1",usr,
-"MySQL Community_manual","ps:ci-mysql.ps1",usr,
 "Power BI","Microsoft.PowerBI",usr,

@@ -22,8 +22,8 @@
 "Blender","ps:ci-blender.ps1",usr,
 "Inkscape","Inkscape.Inkscape",usr,
 "Git","Git.Git",usr,
-"GIMP","GIMP.GIMP.3",usr,"--scope machine"
-"Wings3D","Wings3D.Wings3D",usr,"--scope machine"
+"GIMP","GIMP.GIMP.3",usr,
+"Wings3D","Wings3D.Wings3D",usr,
 "Factor","ps:ci-factor.ps1",usr,
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
 "Python","Python.Python.3.14",usr,"-i"

@@ -17,7 +17,7 @@
 "Gephi","Gephi.Gephi",adm,"--scope machine"
 "Jasp","UniversityOfAmsterdam.JASP",adm,
 "FileZilla","local:\t\TimKosse\FileZilla\3.69.1",adm,
-"Blender","BlenderFoundation.Blender.LTS.4.5",adm,"
+"Blender","BlenderFoundation.Blender.LTS.4.5",adm,
 "Inkscape","Inkscape.Inkscape",usr,
 "Git","Git.Git",usr,
 "Python","Python.Python.3.14",adm,"--scope machine"

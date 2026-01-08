@@ -1,7 +1,6 @@
 "NOME","ID_WINGET","CONFIG","OPTIONS"
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",debug,
 "GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",debug,"--scope machine"
-"Bizagi Modeler", "local:\b\BizagiLimited\BizagiModeler\4.1.0002",debug,"-i"
 "7-zip","7zip.7zip",adm,
 "Google Chrome","Google.Chrome",adm,"--ignore-security-hash"
 "Firefox","Mozilla.Firefox.pt-BR",adm,
@@ -16,19 +15,19 @@
 "Jasp","UniversityOfAmsterdam.JASP",adm,
 "FileZilla","local:\t\TimKosse\FileZilla\3.69.1",adm,
 "JabRef","JabRef.JabRef",adm,
+"Blender","ps:ci-blender.ps1",adm,
+"IRPF 2025","local:\r\RFB\IRPF2025\1.4",adm,
+"Python","raw:-e Python.Python.3.14 --scope machine",adm,
+"GIMP","raw:-e GIMP.GIMP.3 --scope machine",adm,
+"Git","raw:-e Git.Git --scope machine",adm,
+"Inkscape","raw:-e Inkscape.Inkscape --scope machine",adm,
+"CmapTools","IHMC.CmapTools",adm,
+"Wings3D","raw:Wings3D.Wings3D",adm,
+"GraphDB_manual","ps:ci-graphdb.ps1",adm,
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
-"CmapTools","IHMC.CmapTools",usr,
-"IRPF 2025","local:\r\RFB\IRPF2025\1.4",usr,
-"Blender","ps:ci-blender.ps1",usr,
-"Inkscape","Inkscape.Inkscape",usr,
-"Git","Git.Git",usr,
-"GIMP","GIMP.GIMP.3",usr,
-"Wings3D","Wings3D.Wings3D",usr,
 "Factor","ps:ci-factor.ps1",usr,
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
-"Python","Python.Python.3.14",usr,"-i"
-"OpenRefine","OpenRefine.OpenRefine",usr,"-i"
-"GraphDB_manual","ps:ci-graphdb.ps1",usr,
+"OpenRefine","ps:ci-openrefine.ps1",usr,"-i"
 "Biblivre_manual","ps:ci-biblivre.ps1",usr,
 "Bizagi Modeler_manual","ps:ci-bizagi.ps1",usr,
 "MySQL Community_manual","ps:ci-mysql.ps1",usr,

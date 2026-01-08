@@ -1,39 +1,13 @@
 #Requires -RunAsAdministrator
 
+# $ADMIN_USERNAME = "Admin"
+# $ALUNO_USERNAME = "Aluno_CCJE"
+
 function Write-Signature {
     Clear-Host
     Write-Host "** Equipe de TI"
     Write-Host "** CCJE / UFES"
     Write-Host ""
-
-}
-#todo: mysql, archivematica, biblivre
-function EnsureLocalUserExists {
-    param ([string]$username)
-    
-    $userExists = (Get-LocalUser).Name -Contains $username
-    $password = ConvertTo-SecureString "TempPassword" -AsPlainText -Force
-    if (-Not ($userExists))
-    {
-        Write-Host "Creating user: $username"
-        New-LocalUser -Name $username -FullName $username -Password $password
-        Set-LocalUser -Name $username -AccountNeverExpires
-        Enable-LocalUser -Name $username
-        $usersGroup = New-Object System.Security.Principal.SecurityIdentifier("S-1-5-32-545")
-        $group = $usersGroup.Translate([System.Security.Principal.NTAccount]).Value
-        $group = $group.Split('\')[1]
-        Add-LocalGroupMember -Group $group -Member $username
-    }
-    if (-Not(Test-Path -Path "C:\Users\$username")) # ensure user directories exists.
-    {
-        $cred = New-Object System.Management.Automation.PSCredential ($username, $password)
-        Write-Host "Creating $username directories"
-        Start-Process "cmd.exe" -Credential $cred -ArgumentList "/C" -LoadUserProfile
-        
-        Set-LocalUser -name $username -Password ([securestring]::new())
-        Set-LocalUser -Name $username -UserMayChangePassword $false
-        Set-LocalUser -Name $username -PasswordNeverExpires $true
-    }
 }
 $ProgressPreference = 'SilentlyContinue'
 Write-Signature
@@ -61,8 +35,6 @@ catch
     Write-Host $_
 }
 
-#EnsureLocalUserExists -username "Aluno_CCJE"
-
 if ($wg_version -ne '')
 {
     winget settings --enable LocalManifestFiles
@@ -77,6 +49,7 @@ if ($wg_version -ne '')
     
     Write-Host "** config. encontradas:"
     Write-Host ($available_configs -join "`n")
+
     $lab_config = Read-Host "Digite a config. para instalar"
     
     if ($lab_config -ne '')
@@ -114,9 +87,13 @@ if ($wg_version -ne '')
                     Write-Host "custom installation script:" $script_filepath
                     powershell -File  $script_filepath
                 }
+                elseif ($_.ID_WINGET.StartsWith("raw:"))
+                {
+                    winget install $_.ID_WINGET.Substring(4)
+                }
                 else
                 {
-                    winget install -e --id $_.ID_WINGET $wg_prgm_options --accept-source-agreements --accept-package-agreements
+                    winget install -e --id $_.ID_WINGET $wg_prgm_options
                 }
             }
         }

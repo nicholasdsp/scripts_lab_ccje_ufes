@@ -11,18 +11,18 @@
 "Virtual Box","Oracle.VirtualBox",adm,
 "LibreOffice","TheDocumentFoundation.LibreOffice",adm,
 "Jamovi","Jamovi.Desktop.Solid",adm,
-"Gephi","Gephi.Gephi",adm,"--scope machine"
+"Gephi","Gephi.Gephi",adm,
 "Jasp","UniversityOfAmsterdam.JASP",adm,
 "FileZilla","local:\t\TimKosse\FileZilla\3.69.1",adm,
 "JabRef","JabRef.JabRef",adm,
 "Blender","ps:ci-blender.ps1",adm,
 "IRPF 2025","local:\r\RFB\IRPF2025\1.4",adm,
-"Python","raw:-e Python.Python.3.14 --scope machine",adm,
-"GIMP","raw:-e GIMP.GIMP.3 --scope machine",adm,
-"Git","raw:-e Git.Git --scope machine",adm,
-"Inkscape","raw:-e Inkscape.Inkscape --scope machine",adm,
+"Python","Python.Python.3.14",adm,"--scope machine"
+"GIMP","GIMP.GIMP.3",adm,"--scope machine"
+"Git","Git.Git",adm,"--scope machine"
+"Inkscape","Inkscape.Inkscape",adm,"--scope machine"
 "CmapTools","IHMC.CmapTools",adm,
-"Wings3D","raw:Wings3D.Wings3D",adm,
+"Wings3D","Wings3D.Wings3D",adm,
 "GraphDB_manual","ps:ci-graphdb.ps1",adm,
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
 "Factor","ps:ci-factor.ps1",usr,

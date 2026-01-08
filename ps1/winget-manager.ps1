@@ -87,13 +87,10 @@ if ($wg_version -ne '')
                     Write-Host "custom installation script:" $script_filepath
                     powershell -File  $script_filepath
                 }
-                elseif ($_.ID_WINGET.StartsWith("raw:"))
-                {
-                    winget install $_.ID_WINGET.Substring(4)
-                }
                 else
                 {
-                    winget install -e --id $_.ID_WINGET $wg_prgm_options
+                    $expr = "winget install -e --id " +$_.ID_WINGET + " " + $wg_prgm_options
+                    Invoke-Expression $expr
                 }
             }
         }

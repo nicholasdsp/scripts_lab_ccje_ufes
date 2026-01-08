@@ -25,9 +25,9 @@
 "Wings3D","Wings3D.Wings3D",adm,
 "GraphDB_manual","ps:ci-graphdb.ps1",adm,
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
+"OpenRefine","OpenRefine.OpenRefine",usr,"--scope machine"
 "Factor","ps:ci-factor.ps1",usr,
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
-"OpenRefine","ps:ci-openrefine.ps1",usr,"-i"
 "Biblivre_manual","ps:ci-biblivre.ps1",usr,
 "Bizagi Modeler_manual","ps:ci-bizagi.ps1",usr,
 "MySQL Community_manual","ps:ci-mysql.ps1",usr,

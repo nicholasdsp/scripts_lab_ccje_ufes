@@ -1,15 +1,4 @@
-# custom installer: grabs .zip, extract to %appdata% (from username) /Local/CCJE/PRG_<program_name>, create desktop <program_name> shortcut
-
-function MakeShortcut {
-    param (
-        [string]$target_path,
-        [string]$shortcut_path
-    )
-    $wscriptshell = New-Object -ComObject WScript.Shell;
-    $shortcut = $wscriptshell.CreateShortcut($shortcut_path);
-    $shortcut.TargetPath = $target_path;
-    $shortcut.Save();
-}
+# custom installer: grabs .zip, extract to %appdata% (from username) /Local/CCJE/PRG_<program_name>, create desktop <program_name> symlink
 
 function DoCustomInstall {
     param (
@@ -39,11 +28,11 @@ function DoCustomInstall {
         {
             Expand-Archive -Path ($program_root_dir + "\$program_name.zip") -DestinationPath "$program_root_dir\PRG_$program_name" -Force
             Write-Host "Installation will be performed at : $program_root_dir\PRG_$program_name"
-            $shortcut_destination = "C:\Users\$username\Desktop\$program_name.lnk"
+            $shortcut_destination = "C:\Users\$username\Desktop\$program_name"
             if (-Not(Test-Path -Path $shortcut_destination -PathType Leaf))
             {
                 $shortcut_source = "$program_root_dir\PRG_$program_name\$exec_filename"
-                MakeShortcut $shortcut_source $shortcut_destination
+                New-Item "$shortcut_destination" -ItemType SymbolicLink -Value $shortcut_source -Force
             }
         }
     }

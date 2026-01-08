@@ -2,7 +2,7 @@
 "Biblivre","local:\b\Biblivre\org\br\BiblivreInternacional\5.0.5",debug,
 "GraphDB","local:\o\Ontotext\GraphDBDesktop\10.1.4",debug,"--scope machine"
 "7-zip","7zip.7zip",adm,
-"Google Chrome","Google.Chrome",adm,"--ignore-security-hash"
+"Google Chrome","ps:ci-chrome.ps1",adm,
 "Firefox","Mozilla.Firefox.pt-BR",adm,
 "R","RProject.R",adm,
 "R Studio","Posit.RStudio",adm,

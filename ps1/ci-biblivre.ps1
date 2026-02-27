@@ -26,10 +26,17 @@ $instl_fullpath = Join-Path $target_path $filename3
 
 if (Test-Path $instl_fullpath)
 {
-    & net user postgres abracadabra /ADD /passwordchg:no
-    & net localgroup usuários postgres /delete
-    & net localgroup users postgres /delete
-    & WMIC USERACCOUNT WHERE "Name='postgres'" SET PasswordExpires=FALSE
+    Write-Host "Installing postgres [1/3]"
+    $pw = ConvertTo-SecureString "abracadabra" -AsPlainText -Force
+    New-LocalUser -Name "postgres" -Password $pw -PasswordNeverExpires -UserMayNotChangePassword
+    if (Get-LocalGroup -Name "Usuários" -ErrorAction SilentlyContinue)
+    {
+        Remove-LocalGroupMember -Group "Usuários" -Member "postgres" -ErrorAction SilentlyContinue
+    }
+    if (Get-LocalGroup -Name "Users" -ErrorAction SilentlyContinue)
+    {
+        Remove-LocalGroupMember -Group "Users" -Member "postgres" -ErrorAction SilentlyContinue
+    }
     Start-Process -FilePath $instl_fullpath -ArgumentList "--mode unattended --servicepassword abracadabra --superpassword abracadabra --unattendedmodeui none" -Wait
 }
 else 
@@ -42,6 +49,7 @@ $instl_fullpath = Join-Path $target_path $filename1
 
 if (Test-Path $instl_fullpath)
 {
+    Write-Host "Installing tomcat [2/3]"
     Start-Process -FilePath $instl_fullpath -ArgumentList "/S" -Wait
 }
 else 
@@ -53,6 +61,7 @@ $instl_fullpath = Join-Path $target_path $filename2
 
 if (Test-Path $instl_fullpath)
 {
+    Write-Host "Installing apache [3/3]"
     Start-Process -FilePath "msiexec" -ArgumentList "/i `"$instl_fullpath`" ALLUSERS=1 SERVERADMIN=equipe@biblivre.org.br SERVERNAME=localhost SERVERDOMAIN=localhost SERVERPORT=80 /QB-" -Wait
 }
 else 

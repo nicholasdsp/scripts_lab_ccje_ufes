@@ -3,4 +3,4 @@ Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
 
 $source_path = "\\ccje-smb2\lc_guest\GraphDB_Desktop-10.1.4.msi"
 
-msiexec /qn /i "$source_path" ALLUSERS=1
+msiexec /qn /i "$source_path"

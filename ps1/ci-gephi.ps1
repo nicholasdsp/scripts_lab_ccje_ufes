@@ -1,5 +1,5 @@
 # Archivematica CI
-Write-Host "Instalando ARCHIVEMATICA"
+Write-Host "Instalando GEPHI"
 Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
 Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
 

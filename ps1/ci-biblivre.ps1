@@ -13,9 +13,9 @@ New-Item -Path $target_path -ItemType Directory -Force
 
 try 
 {
-    robocopy $source_path $target_path $filename1 /eta
-    robocopy $source_path $target_path $filename2 /eta
-    robocopy $source_path $target_path $filename3 /eta
+    #robocopy $source_path $target_path $filename1 /eta
+    #robocopy $source_path $target_path $filename2 /eta
+    #robocopy $source_path $target_path $filename3 /eta
     robocopy $source_path $target_path $filename4 /eta
     robocopy $source_path $target_path $filename5 /eta
 }
@@ -23,7 +23,7 @@ catch
 {
     Write-Host "File copy error"
 }
-
+<#
 $instl_fullpath = Join-Path $target_path $filename3
 
 if (Test-Path $instl_fullpath)
@@ -71,6 +71,7 @@ else
     Write-Host "apache not found"
     exit    
 }
+#>
 $instl_fullpath = Join-Path $target_path $filename5
 
 if (Test-Path $instl_fullpath)

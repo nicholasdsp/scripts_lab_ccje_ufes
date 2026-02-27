@@ -7,6 +7,7 @@ $filename1 = "apache-tomcat-7.0.70.exe"
 $filename2 = "httpd-2.2.25.msi"
 $filename3 = "postgresql-9.1.23-1-x64.exe"
 $filename4 = "Atualizador_Biblivre_5.1.31.exe"
+$filename5 = "Instalador_Biblivre_5.0.5.exe"
 
 New-Item -Path $target_path -ItemType Directory -Force
 
@@ -16,6 +17,7 @@ try
     robocopy $source_path $target_path $filename2 /eta
     robocopy $source_path $target_path $filename3 /eta
     robocopy $source_path $target_path $filename4 /eta
+    robocopy $source_path $target_path $filename5 /eta
 }
 catch 
 {
@@ -69,7 +71,7 @@ else
     Write-Host "apache not found"
     exit    
 }
-$instl_fullpath = Join-Path $target_path $filename4
+$instl_fullpath = Join-Path $target_path $filename5
 
 if (Test-Path $instl_fullpath)
 {

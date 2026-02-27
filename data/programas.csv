@@ -22,12 +22,12 @@
 "Inkscape","Inkscape.Inkscape",adm,"--scope machine"
 "CmapTools","IHMC.CmapTools",adm,
 "Wings3D","Wings3D.Wings3D",adm,
-"Power BI","Microsoft.PowerBI",adm,"--scope machine"
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
+"Power BI","Microsoft.PowerBI",adm,"--scope machine"
 "OpenRefine","OpenRefine.OpenRefine",usr,"--scope machine"
 "Factor","ps:ci-factor.ps1",usr,
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
-"Biblivre_manual","ps:ci-biblivre.ps1",usr,
+"Biblivre_manual","ps:ci-biblivre.ps1",usr;biblivre,
 "Bizagi Modeler_manual","ps:ci-bizagi.ps1",usr,
 "MySQL Community_manual","ps:ci-mysql.ps1",usr,
 "ARCHIVEMATICA","ps:ci-archivematica.ps1",usr,

@@ -45,7 +45,7 @@ if ($wg_version -ne '')
     Write-Host ""
     Write-Host "** Atualizando winget"
     winget upgrade winget
-    $available_configs = "adm", "usr", "debug"
+    $available_configs = "adm", "usr", "biblivre"
     
     Write-Host "** config. encontradas:"
     Write-Host ($available_configs -join "`n")

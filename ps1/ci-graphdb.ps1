@@ -1,6 +1,21 @@
 Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
 Set-SmbClientConfiguration -RequireSecuritySignature $false -Force
 
-$source_path = "\\ccje-smb2\lc_guest\GraphDB_Desktop-10.1.4.msi"
+$source_path = "\\ccje-smb2\lc_guest\"
 
-msiexec /qn /i "$source_path" MSIINSTALLPERUSER=1
+$target_path = "C:\Users\Aluno_CCJE\Desktop\inst_manual"
+
+$filename = "GraphDB_Desktop-10.1.4.msi"
+
+New-Item -Path $target_path -ItemType Directory -Force
+
+try 
+{
+    robocopy $source_path $target_path $filename /eta
+}
+catch 
+{
+    Write-Host "File copy error"
+}
+
+msiexec /qn /i "$target_path\$filename" MSIINSTALLPERUSER=1

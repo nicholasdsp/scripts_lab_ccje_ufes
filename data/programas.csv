@@ -29,6 +29,6 @@
 "DBDesigner","ps:ci-dbdesigner.ps1",usr,
 "Biblivre_manual","ps:ci-biblivre.ps1",usr;biblivre,
 "Bizagi Modeler_manual","ps:ci-bizagi.ps1",usr,
-"MySQL Community_manual","ps:ci-mysql.ps1",usr,
 "ARCHIVEMATICA","ps:ci-archivematica.ps1",usr,
 "GraphDB_manual","ps:ci-graphdb.ps1",usr,
+"MySQL Community_manual","ps:ci-mysql.ps1",usr,

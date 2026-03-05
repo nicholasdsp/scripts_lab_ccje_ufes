@@ -18,4 +18,4 @@ catch
     Write-Host "File copy error"
 }
 
-msiexec /qn /i "$target_path\$filename" MSIINSTALLPERUSER=1
+msiexec /qn /i "$target_path\$filename" ALLUSERS=2 MSIINSTALLPERUSER=1

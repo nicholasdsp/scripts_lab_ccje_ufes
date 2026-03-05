@@ -22,6 +22,7 @@
 "Inkscape","Inkscape.Inkscape",adm,"--scope machine"
 "CmapTools","IHMC.CmapTools",adm,
 "Wings3D","Wings3D.Wings3D",adm,
+"NotepadPP","Notepad++.Notepad++",adm
 "Mendeley Desktop","local:\e\Elsevier\MendeleyDesktop\1.19.8",adm,"-i"
 "Power BI","Microsoft.PowerBI",adm,"--scope machine"
 "OpenRefine","OpenRefine.OpenRefine",usr,"--scope machine"
